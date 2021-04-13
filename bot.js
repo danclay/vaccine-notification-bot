@@ -108,9 +108,11 @@ class BotWorker extends BaseClusterWorker {
 					}
 				});
 			}
-			setTimeout(blacklistRefesh, Number(process.env.blacklist_refresh));
 		};
-		//blacklistRefesh();
+		blacklistRefesh();
+		setInterval(() => {
+			blacklistRefesh();
+		}, Number(process.env.blacklist_refresh));
 	}
 }
 
