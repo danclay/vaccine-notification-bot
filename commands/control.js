@@ -58,7 +58,7 @@ class Handler extends BaseModule {
 		} else if (msg == "fetchchannel") {
 			const channel = await this.ipc.fetchChannel(info.args[2]);
 			reply(inspect(channel));
-		} else reply("```totalShutdown[hard]\nrestartAllClusters[hard]\nrestartCluster<id>[hard]\nrestartService<name>[hard]\nrestartAllServices[hard]\nreshard\nservicePing\nmm\ndisable <command> <message>\nenable <command>\ngenKeys <number to gen> <boosts> [hours till expire]\nfetchGuild <id>\nfetchMember <guild id> <user id>\nfetchUser <user id>\nfetchChannel <channel id>\nfetchMember <guild id> <user id>\nfetchUser <user id>\noutage <msg>```");
+		} else reply("invalid subcommand");
 	}
 }
 
