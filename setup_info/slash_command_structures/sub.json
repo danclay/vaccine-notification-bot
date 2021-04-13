@@ -1,0 +1,85 @@
+{
+    "name": "sub",
+    "description": "Manage your vaccine location subscriptions",
+    "options": [
+        {
+            "type": 1,
+            "name": "add",
+            "description": "Add a subscription",
+            "options": [
+                {
+                    "type": 3,
+                    "name": "zip",
+                    "description": "5 digit zip code",
+                    "required": true
+                },
+                {
+                    "type": 4,
+                    "name": "radius",
+                    "description": "Radius from zip code (defaults to 15). Value must be between 1 and 100.",
+                    "required": false
+                },
+                {
+                    "type": 5,
+                    "name": "whole_state",
+                    "description": "Whether to check the whole state (overrides radius).",
+                    "required": false
+                },
+                {
+                    "type": 3,
+                    "name": "provider_whitelist",
+                    "description": "Optional: Whitelist of certain providers seperated by commas",
+                    "required": false
+                },
+				{
+                    "type": 3,
+                    "name": "provider_blacklist",
+                    "description": "Optional: Blacklist of certain providers seperated by commas",
+                    "required": false
+                },
+                {
+                    "type": 5,
+                    "name": "2nd_dose",
+                    "description": "If you are looking for your 2nd dose, this will include exclusive 2nd dose appointments.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "name": "remove",
+            "description": "Remove a subscription",
+            "options": [
+                {
+                    "type": 3,
+                    "name": "zip",
+                    "description": "5 digit zip code",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "name": "clear",
+            "description": "Clear all subscriptions."
+        },
+        {
+            "type": 1,
+            "name": "list",
+            "description": "List zip codes you are subscribed to."
+        },
+		{
+			"type": 1,
+			"name": "pause",
+			"description": "Pause notifications",
+			"options": [
+				{
+                    "type": 5,
+                    "name": "paused",
+                    "description": "Set whether notifications are paused",
+                    "required": true
+                }
+			]
+		}
+    ]
+}
