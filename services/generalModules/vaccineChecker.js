@@ -91,7 +91,7 @@ class Handler extends BaseModule {
 					if (!data) return console.error("no state response data");
 					let features = data.features;
 					if (!features) return console.error("no state features data");
-					features = features.filter(v => v.properties.appointments_available === true && v.properties.carries_vaccine === true);
+					features = features.filter(v => v.properties.appointments_available === true);
 					
 					// send notifications
 					await new AsyncArray(rows.filter(v => v.state === state)).forEach(async (row) => {
